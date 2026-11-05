@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexora Technologies — Application Update</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f6fb;color:#172033;display:grid;min-height:100vh;place-items:center;padding:24px}
+    .card{width:min(100%,620px);background:#fff;border:1px solid #e3e8f0;border-radius:18px;overflow:hidden;box-shadow:0 16px 48px #14213d14}
+    header{background:#152a4a;color:white;padding:26px 32px} .brand{font-weight:700;letter-spacing:.3px;font-size:20px} .tag{color:#b9c9e3;font-size:13px;margin-top:6px}
+    main{padding:34px 32px} .eyebrow{font-size:12px;font-weight:700;letter-spacing:1.4px;color:#64748b}
+    h1{font-size:28px;line-height:1.2;margin:12px 0 16px} p{line-height:1.6;color:#475569}
+    .role{background:#f7f9fc;border:1px solid #e6ebf2;border-radius:12px;padding:16px;margin:22px 0}
+    .role strong{display:block;color:#172033;margin-bottom:5px}
+    button{background:#315eea;color:white;border:0;border-radius:9px;padding:13px 18px;font-size:15px;font-weight:700;cursor:pointer}
+    button:hover{background:#244bd0}.fine{font-size:12px;color:#94a3b8;margin-top:22px}
+    .reveal{display:none;text-align:center;padding:20px 0 8px}.emoji{font-size:52px}
+    .reveal h2{font-size:30px;color:#315eea;margin:12px 0}
+    footer{border-top:1px solid #eef1f5;padding:16px 32px;font-size:12px;color:#94a3b8}
+  </style>
+</head>
+<body>
+  <article class="card">
+    <header><div class="brand">NEXORA TECHNOLOGIES</div><div class="tag">People &amp; Talent</div></header>
+    <main>
+      <section id="offer">
+        <div class="eyebrow">APPLICATION UPDATE</div>
+        <h1>You're on our shortlist!</h1>
+        <p>Thanks for your interest in Nexora Technologies. We've got an exciting update about your Software Developer application.</p>
+        <div class="role"><strong>Software Developer</strong>Engineering · Candidate update</div>
+        <p>Ready to view your application update?</p>
+        <button onclick="revealPrank()">View application update</button>
+        <div class="fine">Demo recruitment page · No personal information requested</div>
+      </section>
+      <section class="reveal" id="reveal" aria-live="polite">
+        <div class="emoji">😂</div>
+        <h2>You've been pranked!</h2>
+        <p>There was no job offer—just your friend having a little fun. No passwords or personal information were collected.</p>
+        <button onclick="location.reload()">Back to application</button>
+      </section>
+    </main>
+    <footer>Fictional company and demonstration page · Not a real recruitment notice</footer>
+  </article>
+  <script>
+    function revealPrank(){
+      document.getElementById('offer').style.display='none';
+      document.getElementById('reveal').style.display='block';
+      document.title='Surprise! — Nexora';
+    }
+  </script>
+</body>
+</html>
